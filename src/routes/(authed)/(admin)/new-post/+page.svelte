@@ -1,0 +1,1 @@
+<h1>New post add page</h1>

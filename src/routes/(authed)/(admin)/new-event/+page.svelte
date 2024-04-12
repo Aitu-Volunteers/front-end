@@ -1,0 +1,1 @@
+<h1>New event add page</h1>

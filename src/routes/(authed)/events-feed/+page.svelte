@@ -1,0 +1,1 @@
+<h1>Events feed page</h1>

@@ -1,0 +1,1 @@
+<h1>Curtain post page</h1>

@@ -1,0 +1,1 @@
+<h1>Posts feed page</h1>
