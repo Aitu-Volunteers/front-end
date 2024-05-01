@@ -49,6 +49,7 @@
     }
 
     .row {
+        margin: 16px 0;
         display: flex;
         flex-direction: row;
         justify-content: center;

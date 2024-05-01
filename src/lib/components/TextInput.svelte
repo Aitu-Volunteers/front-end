@@ -17,7 +17,7 @@
     div {
         display: flex;
         flex-direction: column;
-        width: 100%;
+        width: 256px;
         max-width: 256px;
         margin: 30px 0 0 0;
     }
