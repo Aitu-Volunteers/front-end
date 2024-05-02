@@ -2,7 +2,7 @@
     export let name;
     export let required = false;
 
-    const langs = ["Немецский", "Французский", "Китайский"];
+    export let items;
 </script>
 
 <div>
@@ -16,9 +16,9 @@
     <select name="" id="">
         <option value="none" selected disabled hidden>Выбрать</option>
 
-        {#each langs as lang}
-            <option value={lang}>
-                {lang}
+        {#each items as item}
+            <option value={item}>
+                {item}
             </option>
         {/each}
     </select>
