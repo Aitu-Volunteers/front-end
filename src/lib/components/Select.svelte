@@ -30,7 +30,7 @@
         flex-direction: column;
         width: 100%;
         max-width: 256px;
-        margin: 30px 10px;
+        margin: 30px 0;
     }
 
     select {
