@@ -96,10 +96,10 @@
     }
 
     .join {
-        background-color: #ff9d00;
+        background-color: var(--secondary);
     }
 
     .view {
-        background-color: #04d200;
+        background-color: var(--current-team);
     }
 </style>
