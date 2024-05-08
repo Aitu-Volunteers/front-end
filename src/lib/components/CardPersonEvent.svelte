@@ -58,6 +58,7 @@
         width: 100%;
         max-width: 480px;
         min-width: 280px;
+        min-height: 140px;
         color: var(--dark-gray);
     }
 
