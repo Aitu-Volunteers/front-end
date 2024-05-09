@@ -21,13 +21,14 @@
         display: flex;
         flex-direction: column;
         max-width: 128px;
-        min-height: 100px;
+        min-height: 122px;
         align-items: center;
         justify-content: center;
         border-radius: var(--border10);
+        padding: 8px;
     }
     .card-value {
-        font-size: 1.75rem;
+        font-size: 2rem;
         font-weight: var(--semibold);
     }
     .card-title {
