@@ -9,16 +9,16 @@
     --auth-half-background: #D261E3;
 
     --navbar-selected-pin: #F5B1FF;
-    --event-upcoming-background: #CDCAFF;
-    --event-upcoming-text: #7B79AF;
+    --event-upcoming-background: #D7D6FF;
     --event-upcoming-circle: #938EFF;
     --news-background: #FFE2B2;
     --news-text: #A56600;
-    --event-active-background: #756EFF;
-    --event-active-circle: #231E83;
-    --event-active-text: #EAE9FF;
-    --event-inactive-background: #DADADA;
-    --event-inactive-circle: #807F98;
+    --event-active-background: #C5C4FF;
+    --event-dark-blue: #5C44A2;
+    --event-active-text: #765BC5;
+    --event-inactive-background: #DDDDDD;
+    --event-inactive-text: #9891AA;
+    --event-inactive-circle: #746A8E;
     --more-info: #FF8F93;
     --current-team: #04D200;
     --secondary-light: #FFC364;

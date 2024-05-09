@@ -16,7 +16,7 @@
         <div class="event-member-duration">{info.start}-{info.end}</div>
     </div>
 
-    <CircleProgress color="1" info={{ max: info.max, value: info.value }} />
+    <CircleProgress status="1" info={{ max: info.max, value: info.value }} />
 </div>
 
 <style>
