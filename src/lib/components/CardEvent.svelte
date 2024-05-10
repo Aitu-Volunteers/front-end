@@ -9,7 +9,7 @@
         value: 0,
     };
 
-    export let status = 2;
+    export let status = 0;
     const getStatus = ["active", "upcoming", "inactive"];
 </script>
 
