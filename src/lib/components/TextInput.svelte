@@ -10,7 +10,7 @@
             <span>*</span>
         {/if}
     </label>
-    <input type="text" />
+    <input type="text" {required} />
 </div>
 
 <style>

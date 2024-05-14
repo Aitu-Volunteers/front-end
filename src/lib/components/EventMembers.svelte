@@ -7,6 +7,7 @@
         day: 1,
         max: 0,
         value: 0,
+        participate: false,
     };
 </script>
 
@@ -17,6 +18,12 @@
     </div>
 
     <CircleProgress status="1" info={{ max: info.max, value: info.value }} />
+
+    {#if !info.participate}
+        <button class="join">Запись</button>
+    {:else}
+        <button class="cancel">Отмена</button>
+    {/if}
 </div>
 
 <style>
@@ -34,5 +41,27 @@
     .event-member-day {
         font-weight: var(--semibold);
         font-size: 1.5rem;
+    }
+
+    .event-member-wrapper button {
+        color: var(--white);
+        border: none;
+        cursor: pointer;
+        border-radius: var(--border20);
+        padding: 10px 16px;
+        margin: 15px 0 0 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    .join {
+        background-color: var(--secondary);
+    }
+
+    .cancel {
+        background: var(--current-team);
     }
 </style>
