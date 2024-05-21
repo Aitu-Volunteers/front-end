@@ -12,19 +12,20 @@ export const load = async ({ parent, fetch, url, cookies }) => {
     });
     const data = await res.json();
     
-    const res1 = await fetch(`${API_HOST_URL}/api/v1/post`, {
+    const res1 = await fetch(`${API_HOST_URL}/api/v1/user/certificate`, {
         method: "GET",
         mode: "cors",
         headers: {
             "Authorization": `Bearer ${data.id_token}`
         }
     });
+    const data1 = await res1.json();
 
-    if (res1.status === 200) {
-        cookies.set("id_token", data.id_token, {path: "/"});
-        redirect(303, "/"); 
-    } else {
+    if (data1 === "Not registered") {
         console.log("not registered");
+    } else {
+        cookies.set("id_token", data.id_token, {path: "/"});
+        redirect(303, "/");
     }
 }
 
