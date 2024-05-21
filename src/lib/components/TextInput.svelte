@@ -1,4 +1,5 @@
 <script>
+    export let inputName;
     export let name;
     export let required = false;
 </script>
@@ -10,7 +11,7 @@
             <span>*</span>
         {/if}
     </label>
-    <input type="text" {required} />
+    <input type="text" {required} name={inputName}/>
 </div>
 
 <style>

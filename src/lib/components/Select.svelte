@@ -1,8 +1,9 @@
 <script>
     export let name;
     export let required = false;
-
     export let items;
+
+    export let inputName;
 </script>
 
 <div>
@@ -13,7 +14,7 @@
         {/if}
     </label>
 
-    <select name="" id="">
+    <select name={inputName} id="">
         <option value="none" selected disabled hidden>Выбрать</option>
 
         {#each items as item}
