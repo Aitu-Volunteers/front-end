@@ -1,13 +1,15 @@
 <script>
     import CardEvent from "$lib/components/CardEvent.svelte";
-    import Filter from "../../../lib/components/Filter.svelte";
-    import Searchbar from "../../../lib/components/Searchbar.svelte";
+    import Filter from "$lib/components/Filter.svelte";
+    import Searchbar from "$lib/components/Searchbar.svelte";
 </script>
 
 <main class="flex justify-around">
-    <div class="page-half">
+    <div class="page-half" style="margin: 0 0 30px;">
         <Searchbar />
-        <br />
+    </div>
+    <div class="page-half"></div>
+    <div class="page-half">
         <CardEvent
             cardInfo={{
                 title: "Zavod makara",
@@ -53,7 +55,6 @@
         />
     </div>
     <div class="page-half">
-        <br /><br /><br />
         <Filter />
     </div>
 </main>

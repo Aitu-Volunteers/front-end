@@ -1,5 +1,5 @@
 <script>
-    import CardTeam from "../../../lib/components/CardTeam.svelte";
+    import CardTeam from "$lib/components/CardTeam.svelte";
     export let cardInfoArray = [
         {
             imgUrl: "https://example.com/image1.jpg",

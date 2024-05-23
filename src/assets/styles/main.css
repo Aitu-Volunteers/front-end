@@ -18,8 +18,16 @@ a {
     flex-wrap: wrap;
 }
 
+.col {
+    flex-direction: column;
+}
+
 .items-center {
     align-content: center;
+}
+
+.justify-center {
+    justify-content: center;
 }
 
 .justify-around {
@@ -74,7 +82,8 @@ a {
         justify-content: center;
         padding: 20px 0;
 
-        h1, p {
+        h1,
+        p {
             text-align: center;
         }
 
@@ -83,7 +92,7 @@ a {
             max-width: 330px;
             color: var(--dark-gray);
         }
-        
+
         button {
             margin: auto;
             margin-top: 30px;
@@ -142,13 +151,90 @@ a {
     background-image: var(--background-svg-main);
     background-color: var(--auth-half-background);
     position: relative;
-    
+
     .auth-logo {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         width: 300px;
+    }
+}
+
+.profile-content {
+    img {
+        border-radius: 50%;
+    }
+
+    span:nth-child(1) {
+        color: var(--black);
+        font-size: 1.5rem;
+        font-weight: var(--semibold);
+        margin: 0 7px 0 0;
+    }
+
+    .profile-info-wrapper {
+        display: flex;
+        align-self: center;
+    }
+
+    .name-info {
+        font-size: 2rem;
+    }
+
+    .group-info {
+        color: var(--dark-gray);
+        font-weight: 500;
+    }
+
+    .bio-info {
+        font-size: 1.25rem;
+        color: var(--black);
+        font-weight: 400;
+    }
+
+    .mb30 {
+        margin: 0 0 30px;
+    }
+
+    .tg-tag {
+        font-size: 1.25rem;
+        color: #54BBDB;
+        font-weight: 500;
+        align-items: center;
+        display: flex;
+        margin: 0 10px;
+    }
+
+    button {
+        border-radius: var(--border10);
+        border: none;
+        font-weight: 500;
+        color: var(--white);
+        display: flex;
+        align-items: center;
+        padding: 5px 16px;
+        margin: 0 10px 0 0;
+        cursor: pointer;
+
+        svg {
+            margin: 0 7px 0 0;
+        }
+    }
+
+    .edit {
+        background: var(--secondary);
+    }
+
+    .logout {
+        background: #000;
+    }
+
+}
+
+@media (max-width: 1120px) {
+    .sidebar-space {
+        display: none;
     }
 }
 
@@ -160,4 +246,5 @@ a {
     .half-2 {
         display: none;
     }
+
 }

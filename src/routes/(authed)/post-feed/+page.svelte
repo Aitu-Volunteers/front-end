@@ -1,13 +1,34 @@
 <script>
     import CardNews from "$lib/components/CardNews.svelte";
-    import Filter from "../../../lib/components/Filter.svelte";
-    import Searchbar from "../../../lib/components/Searchbar.svelte";
+    import Filter from "$lib/components/Filter.svelte";
+    import Searchbar from "$lib/components/Searchbar.svelte";
+
+    const params = [
+        {
+            title: "Основное",
+            settings: [
+                "Все ивенты",
+                "Предстоящие",
+                "Активные",
+                "Завершенные",
+                "Мои ивенты",
+            ],
+            selected: 0,
+        },
+        {
+            title: "Дата",
+            settings: ["Сначала новые", "Сначала старые"],
+            selected: 0,
+        },
+    ];
 </script>
 
 <main class="flex justify-around">
-    <div class="page-half">
+    <div class="page-half" style="margin: 0 0 30px;">
         <Searchbar />
-        <br />
+    </div>
+    <div class="page-half"></div>
+    <div class="page-half">
         <CardNews
             cardInfo={{
                 title: "Выборы руководителя ПО AITU VOLUNTEERS!",
@@ -40,7 +61,6 @@
         />
     </div>
     <div class="page-half">
-        <br /><br /><br />
-        <Filter />
+        <Filter {params} />
     </div>
 </main>
