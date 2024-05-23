@@ -40,6 +40,10 @@ a {
     width: 100dvw;
 }
 
+.text-dark {
+    color: var(--black);
+}
+
 .half {
     width: 50%;
     min-width: 350px;
@@ -84,6 +88,53 @@ a {
             margin: auto;
             margin-top: 30px;
         }
+    }
+}
+
+.sidebar-space {
+    max-width: 256px;
+    max-width: 256px;
+    width: 100%;
+    height: 100dvh;
+}
+
+.page-content {
+    padding: 32px 20px;
+
+    .page-half {
+        .event-card-wrapper {
+            margin-bottom: 16px;
+        }
+
+        .news-wrapper {
+            margin-bottom: 16px;
+        }
+
+        .section-heading {
+            margin-top: 20px;
+            color: var(--black);
+        }
+
+        .video-wrapper {
+            margin-top: 16px;
+            max-width: 400px;
+
+            iframe {
+                border-radius: 20px;
+            }
+        }
+
+        .reference-list {
+            list-style: none;
+
+            li {
+                margin: 10px 0;
+            }
+        }
+
+        max-width: 536px;
+        min-width: 390px;
+        width: 100%;
     }
 }
 

@@ -51,6 +51,9 @@
 
 <style>
     .sidebar-wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
         max-width: 256px;
         width: 100%;
         height: 100dvh;

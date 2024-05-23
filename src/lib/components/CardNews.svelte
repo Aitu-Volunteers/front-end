@@ -59,7 +59,6 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 20px;
         width: 100%;
         min-width: 350px;
         max-width: 536px;
@@ -74,7 +73,7 @@
     }
 
     .news-wrapper:nth-child(even) {
-        background-image: var(--background-svg-main);
+        background-image: var(--background-svg-news);
     }
 
     .news-date {

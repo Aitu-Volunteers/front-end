@@ -24,13 +24,20 @@ export const load = async ({ parent, fetch, url, cookies }) => {
     if (data1 === "Not registered") {
         console.log("not registered");
     } else {
-        cookies.set("id_token", data.id_token, {path: "/"});
+        cookies.set(
+            "id_token",
+            data.id_token, {
+                path: "/",
+                httpOnly: true,
+                maxAge: 3600
+            }
+        );
         redirect(303, "/");
     }
 }
 
 export const actions = {
-    default: async ({request}) => {
+    default: async ({ request, cookies }) => {
         const data = await request.formData();
         
         // get formdata
@@ -45,6 +52,15 @@ export const actions = {
             "iin": data.get("IIN"),
         }
 
-        console.log(user_data);
+        const res = await fetch(`${API_HOST_URL}/api/v1/auth/registration`, {
+            method: "POST",
+            mode: "cors",
+            headers: {
+                "Authorization": `Bearer ${cookies.get("id_token")}`,
+                "Content-Type": "application/json"
+            },
+            body: user_data
+        });
+        
     }
 };
