@@ -10,6 +10,9 @@
         { title: "Китайский", value: "Chinese" },
         { title: "Французский", value: "French" },
     ];
+
+    export let form;
+    $: form = console.log(form);
 </script>
 
 <div class="register">
@@ -32,6 +35,7 @@
                 name="Номер телефона"
                 inputName="phone"
                 required={true}
+                type={"tel"}
             />
         </div>
         <div class="flex justify-around">

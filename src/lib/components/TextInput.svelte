@@ -2,6 +2,7 @@
     export let inputName;
     export let name;
     export let required = false;
+    export let type = "text";
 </script>
 
 <div>
@@ -11,7 +12,7 @@
             <span>*</span>
         {/if}
     </label>
-    <input type="text" {required} name={inputName}/>
+    <input {type} name={inputName}/>
 </div>
 
 <style>

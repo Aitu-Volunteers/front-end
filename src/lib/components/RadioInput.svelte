@@ -12,9 +12,9 @@
     </label>
 
     <div class="row">
-        <input type="radio" name="gender" value="male" id="male" />
+        <input type="radio" name="gender" value="Male" id="male" />
         <label for="male" class="radio-text">Мужской</label>
-        <input type="radio" name="gender" value="female" id="female" />
+        <input type="radio" name="gender" value="Female" id="female" />
         <label for="female" class="radio-text female">Женский</label>
     </div>
 </div>
