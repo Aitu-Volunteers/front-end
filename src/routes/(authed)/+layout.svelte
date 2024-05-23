@@ -1,7 +1,6 @@
 <script>
     import Sidebar from "$lib/components/Sidebar.svelte";
     import PageHeader from "$lib/components/PageHeader.svelte";
-    import { page } from "$app/stores";
 </script>
 
 <div style="display: flex;">
