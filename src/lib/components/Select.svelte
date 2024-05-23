@@ -18,8 +18,8 @@
         <option value="none" selected disabled hidden>Выбрать</option>
 
         {#each items as item}
-            <option value={item}>
-                {item}
+            <option value={item.value}>
+                {item.title}
             </option>
         {/each}
     </select>

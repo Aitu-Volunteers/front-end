@@ -1,13 +1,14 @@
 <script>
     import Sidebar from "$lib/components/Sidebar.svelte";
     import PageHeader from "$lib/components/PageHeader.svelte";
+    import { page } from "$app/stores";
 </script>
 
 <div style="display: flex;">
     <Sidebar />
     <div class="sidebar-space"></div>
     <section style="width: 100%;">
-        <PageHeader/>
+        <PageHeader />
         <div class="page-content">
             <slot>
                 <h1>Nothing to show here yet...</h1>

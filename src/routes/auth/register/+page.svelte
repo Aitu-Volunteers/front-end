@@ -1,11 +1,15 @@
 <script>
-    import { enhance } from '$app/forms';
+    import { enhance } from "$app/forms";
     import Button from "$lib/components/Button.svelte";
     import TextInput from "$lib/components/TextInput.svelte";
     import Select from "$lib/components/Select.svelte";
     import RadioInput from "$lib/components/RadioInput.svelte";
 
-    const items = ["Немецский", "Китайский", "Француский"];
+    const items = [
+        { title: "Немецкий", value: "German" },
+        { title: "Китайский", value: "Chinese" },
+        { title: "Французский", value: "French" },
+    ];
 </script>
 
 <div class="register">
@@ -15,20 +19,24 @@
     </div>
     <form method="post" class="" use:enhance>
         <div class="flex justify-around">
-            <TextInput name="Имя" inputName = "name" required={true} />
-            <TextInput name="Фамилия" inputName = "surname" required={true} />
+            <TextInput name="Имя" inputName="name" required={true} />
+            <TextInput name="Фамилия" inputName="surname" required={true} />
         </div>
         <div class="flex justify-around">
-            <TextInput name="Телеграм тег" inputName = "tag" required={true} />
-            <TextInput name="Группа" inputName = "group" required={true} />
+            <TextInput name="Телеграм тег" inputName="tag" required={true} />
+            <TextInput name="Группа" inputName="group" required={true} />
         </div>
         <div class="flex justify-around">
-            <TextInput name="ИИН" inputName = "IIN" required={true} />
-            <TextInput name="Номер телефона" inputName = "phone" required={true} />
+            <TextInput name="ИИН" inputName="IIN" required={true} />
+            <TextInput
+                name="Номер телефона"
+                inputName="phone"
+                required={true}
+            />
         </div>
         <div class="flex justify-around">
             <RadioInput name="Пол" required={true} />
-            <Select name="Доп. язык" inputName = "add-lang" {items} />
+            <Select name="Доп. язык" inputName="add-lang" {items} />
         </div>
         <Button>Подтвердить</Button>
     </form>

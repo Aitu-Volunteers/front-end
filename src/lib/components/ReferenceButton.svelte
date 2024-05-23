@@ -25,10 +25,15 @@
     }
 
     .icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: min-content;
     }
 
     .text {
         width: 100%;
+        text-align: start;
+        margin: 0 20px;
     }
 </style>

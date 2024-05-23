@@ -21,11 +21,14 @@
             {cardInfo.content}
         </div>
         <div class="people">
-            <img src="./src/assets/imgs/people_number_icon.svg" alt="icon">{cardInfo.people}
+            <img
+                src="./src/assets/imgs/people_number_icon.svg"
+                alt="icon"
+            />{cardInfo.people}
         </div>
     </div>
     <div class="card-footer">
-        {#if (cardInfo.participate = true)}
+        {#if cardInfo.participate === true}
             <button class="view">Текущая команда</button>
         {:else}
             <button class="join">Вступить</button>
