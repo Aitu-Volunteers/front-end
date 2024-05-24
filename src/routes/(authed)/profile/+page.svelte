@@ -3,6 +3,7 @@
     import userImg from "$assets/imgs/profile-test.png";
     import telegramIcon from "$assets/imgs/telegram.svg";
     import Button from "$lib/components/Button.svelte";
+    import LanguageProgress from "$lib/components/LanguageProgress.svelte";
 
     const cardInfoArray = [
         {
@@ -33,8 +34,8 @@
         </div>
         <div class="flex col items-center justify-center">
             <div>
-                <span class="name-info">Чел Мемный</span>
-                <span class="group-info">CS-2252</span>
+                <span class="name-info">Zhansen Segizbay</span>
+                <span class="group-info">CS-2210</span>
             </div>
             <div class="flex items-center" style="margin: 20px 0;">
                 <img src={telegramIcon} alt="telegram" />
@@ -115,9 +116,33 @@
         <div class="mb30">
             <span>О себе:</span>
             <br />
-            <span class="bio-info"
-                >Люблю делать ивенты людей... <br />шучу не людей</span
-            >
+            <span class="bio-info">
+                Люблю делать ивенты людей...
+                <br />шучу не людей
+            </span>
+        </div>
+        <div class="mb30">
+            <span>Владение языками</span>
+            <ul class="language-list">
+                <li>
+                    <LanguageProgress
+                        language_name = "Казахский"
+                        level = 6
+                    />
+                </li>
+                <li>
+                    <LanguageProgress
+                        language_name = "Русский"
+                        level = 5
+                    />
+                </li>
+                <li>
+                    <LanguageProgress
+                        language_name = "Англииский"
+                        level = 5
+                    />
+                </li>
+            </ul>
         </div>
     </div>
     <div class="page-half">

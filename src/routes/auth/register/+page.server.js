@@ -25,7 +25,7 @@ export const load = async ({ parent, fetch, url, cookies }) => {
         "id_token",
         data.id_token, {
             path: "/",
-            httpOnly: true,
+            httpOnly: false,
             maxAge: 3600
         }
     );

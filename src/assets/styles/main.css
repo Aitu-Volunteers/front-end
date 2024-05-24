@@ -13,6 +13,10 @@ a {
     color: #fff;
 }
 
+ul {
+    list-style: none;
+}
+
 .flex {
     display: flex;
     flex-wrap: wrap;
@@ -134,10 +138,14 @@ a {
         }
 
         .reference-list {
-            list-style: none;
-
             li {
                 margin: 10px 0;
+            }
+        }
+
+        .language-list {
+            li {
+                margin: 24px 0;
             }
         }
 
