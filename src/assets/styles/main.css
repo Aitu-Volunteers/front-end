@@ -240,6 +240,10 @@ ul {
 
 }
 
+.ql-toolbar {
+    border: none !important;
+}
+
 @media (max-width: 1120px) {
     .sidebar-space {
         display: none;
