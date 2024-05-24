@@ -104,12 +104,12 @@
     try {
       const response = await fetch("http://64.227.184.121:8181/api/v1/post", {
         method: "POST",
-        body: jsonData,
         mode: "cors",
         headers: {
           Authorization: `Bearer ${jwt_token}`,
           "Content-Type": "application/json",
         },
+        body: jsonData
       });
 
       if (!response.ok) {

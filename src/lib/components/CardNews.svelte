@@ -4,6 +4,7 @@
     export let cardInfo = {
         title: undefined,
         date: undefined,
+        id: 11,
     };
 </script>
 
@@ -49,7 +50,7 @@
         </span>
     </div>
     <div>
-        <Button>подробнее</Button>
+        <a href="/post-feed/{cardInfo.id}"><Button>подробнее</Button></a>
     </div>
 </div>
 

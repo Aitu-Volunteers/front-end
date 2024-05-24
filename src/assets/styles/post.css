@@ -1,0 +1,7 @@
+.post-content img{
+    max-height: 300px;
+    border-radius: var(--border10);
+    width: 100%;
+    background-color: var(--progressbar-background);
+    object-fit: cover;
+}
