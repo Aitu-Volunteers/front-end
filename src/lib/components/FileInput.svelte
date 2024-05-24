@@ -59,21 +59,20 @@
 <style>
     button {
         width: 100%;
-        min-width: 200px;
-        max-width: 280px;
+        width: 256px;
+        max-width: 256px;
         background: var(--secondary);
         border: none;
         padding: 4px 16px 4px 4px;
         display: flex;
-        justify-content: space-between;
         align-items: center;
         color: var(--white);
         border-radius: var(--border10);
         cursor: pointer;
     }
 
-    svg {
-        margin: 0 0px;
+    button svg {
+        margin: 0 10px 0 20px;
     }
 
     span {

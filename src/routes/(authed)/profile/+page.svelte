@@ -65,8 +65,8 @@
                             stroke-linejoin="round"
                         />
                     </svg>
-                    редактировние</button
-                >
+                    <a href="/profile/edit">редактировние</a>
+                </button>
                 <form method="post" action="/logout">
                     <button class="logout">
                         <svg
@@ -106,15 +106,15 @@
     </div>
     <div class="page-half">
         <div class="mb30">
-            <span>Баркод:</span>
+            <span class="bio-header">Баркод:</span>
             <span class="bio-info">220190</span>
         </div>
         <div class="mb30">
-            <span>Команда:</span>
+            <span class="bio-header">Команда:</span>
             <span class="bio-info">8 (Амина)</span>
         </div>
         <div class="mb30">
-            <span>О себе:</span>
+            <span class="bio-header">О себе:</span>
             <br />
             <span class="bio-info">
                 Люблю делать ивенты людей...
@@ -122,32 +122,23 @@
             </span>
         </div>
         <div class="mb30">
-            <span>Владение языками</span>
+            <span class="bio-header">Владение языками</span>
             <ul class="language-list">
                 <li>
-                    <LanguageProgress
-                        language_name = "Казахский"
-                        level = 6
-                    />
+                    <LanguageProgress language_name="Казахский" level="6" />
                 </li>
                 <li>
-                    <LanguageProgress
-                        language_name = "Русский"
-                        level = 5
-                    />
+                    <LanguageProgress language_name="Русский" level="5" />
                 </li>
                 <li>
-                    <LanguageProgress
-                        language_name = "Англииский"
-                        level = 5
-                    />
+                    <LanguageProgress language_name="Англииский" level="5" />
                 </li>
             </ul>
         </div>
     </div>
     <div class="page-half">
         <div class="mb30">
-            <span>Участие в ивентах</span>
+            <span class="bio-header">Участие в ивентах</span>
             <br />
             <span class="bio-info">волонтерства: 36ч.</span>
         </div>

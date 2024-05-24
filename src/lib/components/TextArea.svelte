@@ -1,9 +1,8 @@
 <script>
+    export let inputName;
     export let name;
     export let required = false;
-    export let items;
-
-    export let inputName;
+    export let type = "text";
 </script>
 
 <div>
@@ -13,16 +12,7 @@
             <span>*</span>
         {/if}
     </label>
-
-    <select name={inputName} id="">
-        <option value="none" selected disabled hidden>Выбрать</option>
-
-        {#each items as item}
-            <option value={item.value}>
-                {item.title}
-            </option>
-        {/each}
-    </select>
+    <textarea {type} name={inputName} />
 </div>
 
 <style>
@@ -30,18 +20,17 @@
         display: flex;
         flex-direction: column;
         width: 100%;
-        max-width: 256px;
-        margin: 30px 0 0;
+        margin: 30px 0 0 0;
     }
 
-    select {
+    textarea {
         border-radius: var(--border10);
         border: none;
         margin: 10px 0;
         padding: 8px 12px;
         background: var(--textinput-background);
-        text-align: center;
         outline: none;
+        height: 96px;
     }
 
     span {

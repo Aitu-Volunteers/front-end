@@ -42,6 +42,10 @@ ul {
     justify-content: space-between;
 }
 
+.justify-evenly {
+    justify-content: space-evenly;
+}
+
 .underline {
     text-decoration: underline;
 }
@@ -174,7 +178,7 @@ ul {
         border-radius: 50%;
     }
 
-    span:nth-child(1) {
+    .bio-header {
         color: var(--black);
         font-size: 1.5rem;
         font-weight: var(--semibold);
@@ -188,6 +192,7 @@ ul {
 
     .name-info {
         font-size: 2rem;
+        font-weight: var(--semibold);
     }
 
     .group-info {
@@ -236,6 +241,41 @@ ul {
 
     .logout {
         background: #000;
+    }
+
+    .profile-edit-image {
+        position: relative;
+
+        img {
+            position: relative;
+        }
+
+        .edit {
+            position: absolute;
+            bottom: 7%;
+            right: 0;
+            padding: 7px;
+            margin: 0;
+
+            svg {
+                margin: 0;
+            }
+        }
+    }
+
+    .edit-state {
+        color: #6F6F6F;
+        display: flex;
+        align-items: center;
+        font-size: 1.25rem;
+        margin: 10px 0 0;
+        font-weight: 500;
+    }
+
+    .edit-label {
+        color: var(--dark-gray);
+        font-weight: var(--semibold);
+        margin: 0 10px;
     }
 
 }
