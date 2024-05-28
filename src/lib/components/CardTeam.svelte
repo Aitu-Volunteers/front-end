@@ -39,9 +39,10 @@
 <style>
     .card-container {
         height: 280px;
-        width: 256px;
+        width: 100%;
         border-radius: 20px;
-        background: #f6f6f6;
+        background: var(--white);
+        box-shadow: var(--card-shadow);
         display: flex;
         flex-direction: column;
     }

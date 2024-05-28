@@ -1,16 +1,27 @@
 <script>
     export let params = {
-        color: "var(--news-background)",
-        name : "Добавить что?",
-        href: "/"}
+        color: 0,
+        name: "Добавить что?",
+        href: "/",
+    };
+
+    const colors = ["news", "event"];
 </script>
 
-<a href="{params.href}" style="background-color: {params.color};">
+<a href={params.href} class={colors[params.color]}>
     <span>{params.name}</span>
-    <img src="/src/assets/imgs/arrow-top-right.svg" alt="arrow">
+    <img src="/src/assets/imgs/arrow-top-right.svg" alt="arrow" />
 </a>
 
 <style>
+    .event {
+        background-color: #cdcaff;
+    }
+
+    .news {
+        background-color: #ffe1b2;
+    }
+
     a {
         text-decoration: none;
         max-width: 256px;

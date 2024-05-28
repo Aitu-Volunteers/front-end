@@ -44,7 +44,7 @@
 
 <style>
     .card-wrapper {
-        box-shadow: var(--filterbox-shadow);
+        box-shadow: var(--card-shadow);
         display: flex;
         flex-direction: column;
         max-width: 256px;
