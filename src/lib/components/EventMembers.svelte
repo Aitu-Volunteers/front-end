@@ -2,24 +2,38 @@
     import CircleProgress from "$lib/components/CircleProgress.svelte";
 
     export let info = {
-        start: undefined,
-        end: undefined,
-        day: 1,
-        max: 0,
+        startDate: undefined,
+        endDate: undefined,
+        id: 1,
+        participantLimit: 0,
         value: 0,
-        participate: false,
+        active: false,
+    };
+
+    const formatDate = (dateString) => {
+        let date = new Date(dateString);
+
+        let hours = date.getHours();
+        let minutes = date.getMinutes();
+
+        return hours + ":" + minutes;
     };
 </script>
 
 <div class="event-member-wrapper">
     <div class="event-member-head">
-        <div class="event-member-day">День {info.day}</div>
-        <div class="event-member-duration">{info.start}-{info.end}</div>
+        <div class="event-member-day">День {info.id}</div>
+        <div class="event-member-duration">
+            {formatDate(info.startDate)}-{formatDate(info.endDate)}
+        </div>
     </div>
 
-    <CircleProgress status="1" info={{ max: info.max, value: info.value }} />
+    <CircleProgress
+        status="1"
+        info={{ max: info.participantLimit, value: info.value }}
+    />
 
-    {#if !info.participate}
+    {#if !info.active}
         <button class="join">Запись</button>
     {:else}
         <button class="cancel">Отмена</button>

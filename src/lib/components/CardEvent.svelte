@@ -4,13 +4,30 @@
     export let cardInfo = {
         title: undefined,
         description: undefined,
-        date: undefined,
-        max: 0,
-        value: 0,
+        days: [
+            {
+                id: 1,
+                startDate: undefined,
+                endDate: undefined,
+                participantLimit: 0,
+                active: false,
+            },
+        ],
+        id: 1,
     };
 
     export let status = 0;
     const getStatus = ["active", "upcoming", "inactive"];
+
+    const formatDate = (dateString) => {
+        const date = new Date(dateString);
+
+        const day = String(date.getDate()).padStart(2, "0");
+        const month = String(date.getMonth() + 1).padStart(2, "0");
+        const year = date.getFullYear();
+
+        return `${day}.${month}.${year}`;
+    };
 </script>
 
 <div class="event-card-wrapper {getStatus[status]}">
@@ -18,10 +35,12 @@
         <div class="event-card-title">{cardInfo.title}</div>
         <div class="event-card-description">{cardInfo.description}</div>
         <div class="event-card-row">
-            <button class="event-card-button">
-                {#if status != 2}Регистрация
-                {:else}Подробнее{/if}
-            </button>
+            <a href="events-feed/{cardInfo.id}">
+                <button class="event-card-button">
+                    {#if status != 2}Регистрация
+                    {:else}Подробнее{/if}
+                </button>
+            </a>
             <div class="event-card-row">
                 <svg
                     width="24"
@@ -55,13 +74,18 @@
                         stroke-linejoin="round"
                     />
                 </svg>
-                <span class="event-card-date">{cardInfo.date}</span>
+                <span class="event-card-date">
+                    {formatDate(cardInfo.days[0].startDate)}
+                </span>
             </div>
         </div>
     </div>
     <div class="event-card-col col2">
         <CircleProgress
-            info={{ max: cardInfo.max, value: cardInfo.value }}
+            info={{
+                max: cardInfo.days[0].participantLimit,
+                value: cardInfo.value,
+            }}
             status={status != 1 ? status : status - 1}
         />
     </div>
