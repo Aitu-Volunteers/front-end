@@ -35,7 +35,7 @@
                 class="sidebar-item"
                 aria-current={$page.url.pathname === item.link}
             >
-                <img src={item.icon} alt="" />
+                <img src={item.icon} alt={item.name} />
                 {item.name}
             </a>
         {/each}

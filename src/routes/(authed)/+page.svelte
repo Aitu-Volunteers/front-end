@@ -6,62 +6,61 @@
     import githubicon from "$assets/imgs/Github-icon.svg";
     import attachmenticon from "$assets/imgs/attachment-clip-hook.svg";
     import helpicon from "$assets/imgs/help-question.png";
+
+    export let data;
 </script>
 
 <main class="flex justify-around">
     <div class="page-half">
-        <CardEvent cardInfo={{
-            title: "Zavod makara",
-            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto numquam similique asperiores molestias eveniet blanditiis fugit aut consequatur quasi earum, beatae nobis voluptates tempora, odio optio minus labore incidunt sapiente?",
-            date: "23.08.2024",
-            max: 10,
-            value: 1,
-        }}/>
-        <CardEvent cardInfo={{
-            title: "Zavod makara",
-            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto numquam similique asperiores molestias eveniet blanditiis fugit aut consequatur quasi earum, beatae nobis voluptates tempora, odio optio minus labore incidunt sapiente?",
-            date: "23.08.2024",
-            max: 10,
-            value: 3,
-        }}/>
-        <CardEvent cardInfo={{
-            title: "Zavod makara",
-            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto numquam similique asperiores molestias eveniet blanditiis fugit aut consequatur quasi earum, beatae nobis voluptates tempora, odio optio minus labore incidunt sapiente?",
-            date: "23.08.2024",
-            max: 10,
-            value: 5,
-        }}/>
+        {#each data.events as event}
+            <CardEvent cardInfo={{ ...event, value: 7 }} />
+        {/each}
     </div>
     <div class="page-half">
-        <CardNews cardInfo={{
-            title: "Выборы руководителя ПО AITU VOLUNTEERS!",
-            date: "23.01.2024"
-        }}/>
-        <CardNews cardInfo={{
-            title: "Поступление новых волонтеров первашей!",
-            date: "23.01.2024"
-        }}/>
+        <CardNews
+            cardInfo={{
+                title: "Выборы руководителя ПО AITU VOLUNTEERS!",
+                date: "23.01.2024",
+            }}
+        />
+        <CardNews
+            cardInfo={{
+                title: "Поступление новых волонтеров первашей!",
+                date: "23.01.2024",
+            }}
+        />
         <h1 class="section-heading">Справочный уголок 📌</h1>
         <div class="video-wrapper">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/M8yzPkg2C5Q?si=vEsRWR5d3YXZY_tR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/M8yzPkg2C5Q?si=vEsRWR5d3YXZY_tR"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+            ></iframe>
         </div>
         <ul class="reference-list">
             <li>
                 <ReferenceButton>
-                    <img src={attachmenticon} alt="" slot="icon">
+                    <img src={attachmenticon} alt="" slot="icon" />
                     <a href="https://github.com/Aitu-Volunteers">Правила</a>
                 </ReferenceButton>
             </li>
             <li>
                 <ReferenceButton>
-                    <img src={helpicon} alt="" slot="icon">
+                    <img src={helpicon} alt="" slot="icon" />
                     <a href="https://github.com/Aitu-Volunteers">FAQ</a>
                 </ReferenceButton>
             </li>
             <li>
                 <ReferenceButton>
-                    <img src={githubicon} alt="" slot="icon">
-                    <a href="https://github.com/Aitu-Volunteers">Github проекта</a>
+                    <img src={githubicon} alt="" slot="icon" />
+                    <a href="https://github.com/Aitu-Volunteers"
+                        >Github проекта</a
+                    >
                 </ReferenceButton>
             </li>
         </ul>
