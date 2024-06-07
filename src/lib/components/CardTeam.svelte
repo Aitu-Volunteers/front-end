@@ -1,37 +1,36 @@
 <script>
-    export let cardInfo = {
-        imgUrl: undefined,
-        title: undefined,
-        content: undefined,
-        people: -1,
-        participate: false,
+    export let description;
+    export let id = -1;
+    export let leader = {};
+    export let members = [];
+    export let title;
+    export let telegramLink;
+    export let participate = false;
+
+    const handleJoin = () => {
+        alert('Join button clicked');
+        // Future: Send a POST request to join the team
     };
 </script>
 
 <div class="card-container">
-    <div
-        class="card-header"
-        style:background-image={`url(${cardInfo.imgUrl})`}
-    ></div>
+    <div class="card-header"></div>
     <div class="card-body">
         <div class="title">
-            Команда {cardInfo.title}
+            Команда {leader.firstName}
         </div>
         <div class="content">
-            {cardInfo.content}
+            {description}
         </div>
         <div class="people">
-            <img
-                src="./src/assets/imgs/people_number_icon.svg"
-                alt="icon"
-            />{cardInfo.people}
+            <img src="./src/assets/imgs/people_number_icon.svg" alt="icon" />{members.length}
         </div>
     </div>
     <div class="card-footer">
-        {#if cardInfo.participate === true}
+        {#if participate}
             <button class="view">Текущая команда</button>
         {:else}
-            <button class="join">Вступить</button>
+            <button class="join" on:click={handleJoin}>Вступить</button>
         {/if}
     </div>
 </div>
@@ -53,7 +52,7 @@
         background-position: center;
         background-size: cover;
         flex-grow: 5;
-        border-radius: 20px 20px 0px 0px;
+        border-radius: 20px 20px 0 0;
     }
 
     .card-body {
@@ -87,14 +86,14 @@
         width: 100%;
         height: 100%;
         border: none;
-        border-radius: 0px 0px 20px 20px;
+        border-radius: 0 0 20px 20px;
         font-size: 1.3rem;
         font-weight: bold;
         color: white;
         transition: 0.2s ease;
     }
 
-    button:hover {
+    .join:hover {
         cursor: pointer;
         opacity: 0.9;
     }
